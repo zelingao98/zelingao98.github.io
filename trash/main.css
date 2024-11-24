@@ -1,0 +1,502 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #4e613e
+}
+
+a:hover {
+    color: #566c7f
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    height: 0
+}
+
+#wave-canvas {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: 55%;
+    min-width: 850px;
+    height: 150px;
+    border: 0
+}
+
+#main {
+    margin: 0 auto;
+    padding: 45px 30px 15px;
+    width: 100%;
+    min-width: 240px;
+    text-align: center;
+    background-color: rgb(243, 249, 254)
+}
+
+.main-content {
+    padding: 0;
+    text-align: center;
+    cursor: default;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        width: 66%;
+        min-width: 768px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 968px) {
+    .main-content {
+        width: 66%;
+        max-width: 968px;
+        margin: auto;
+    }
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 50px;
+    margin-top: 0px;
+    text-align: center;
+    background-color: rgb(243, 249, 254);
+    position: fixed;
+    z-index: 2
+}
+
+div.outercontainer {
+    text-align: center
+}
+
+div.header,
+div.container {
+    min-width: 330px
+}
+
+div.img,
+div.text {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+div.header {
+    line-height: 50px
+}
+
+div.ftheader,
+div.ftsubheader {
+    display: inline-block;
+    color: #FFF
+}
+
+div.ftheader {
+    float: left;
+    padding-left: 15px;
+    font-size: 1.17em
+}
+
+div.ftsubheader {
+    float: right;
+    padding-left: 7.5px;
+    padding-right: 5px;
+    font-family: Candara, Constantia, "Avenir Next", Palatino, Cambria, Times;
+}
+
+div.container a:link,
+div.container a:visited {
+    color: #2274bb;
+    text-decoration: none
+}
+
+
+/* Avatar, Name, etc. */
+#main-content-container {
+    margin: 0 auto;
+    padding: 15px 0 0;
+    max-width: 1080px;
+}
+
+@media (min-width: 768px) {
+    #main-content-container {
+        padding: 15px 0;
+    }
+}
+
+#main-content-container .col-avatar {
+    text-align: center
+}
+
+@media (min-width: 768px) {
+    #main-content-container .col-avatar {
+        text-align: center
+    }
+}
+
+#main-content-container .col-avatar .avatar {
+    z-index: 100;
+    width: 180px;
+    height: 180px;
+    margin-top: 0px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 0.3em #eee;
+    opacity: 1;
+}
+
+#main-content-container .col-info {
+    height: 100%;
+    align-items: center;
+}
+
+#main-info-container {
+    padding-top: 15px
+}
+
+#main-info-container .col-name {
+    text-align: center;
+    margin-top: 30px
+}
+
+@media (min-width: 768px) {
+    #main-info-container .col-name {
+        text-align: left;
+        margin-top: 0;
+    }
+}
+
+#main-info-container .col-name .text {
+    text-align: left
+}
+
+#main-info-container .col-name .name {
+    vertical-align: bottom;
+    display: flex;
+    margin: 0;
+    color: #566c7f;
+    font-size: 1.5em;
+    font-family: Candara, Constantia, "Avenir Next", Palatino, Cambria, Times;
+}
+
+#main-info-container .col-name .email {
+    color: #666;
+    font-size: 14px
+}
+
+#main-info-container .col-link {
+    text-align: center;
+    margin: -5px 0 -25px;
+}
+
+#main-info-container .col-link ul {
+    margin: 0px auto auto;
+    padding: 0;
+    list-style: none;
+    text-align: center
+}
+
+#main-info-container .col-link li {
+    display: inline-block;
+    margin: auto;
+    padding: 0 10px;
+    color: #ccc;
+    line-height: 10px
+}
+
+#main-info-container .col-link li a {
+    width: 45px;
+    height: 45px;
+    color: #ccc;
+    padding: 0;
+    font-size: 45px;
+    line-height: 45px
+}
+
+#main-info-container .col-link li a:focus,
+#main-info-container .col-link li a:hover {
+    text-decoration: none;
+    cursor: hand
+}
+
+#main-info-container .col-link li a.border {
+    border: 1px solid #ccc;
+    border-radius: 100%;
+}
+
+#main-info-container .col-link li a.padding {
+    padding: 0px 0px;
+    font-size: 22px
+}
+
+#main-info-container .name-with-icons {
+    display: flex;
+    justify-content: left;
+}
+
+@media only screen and (max-width: 768px) {
+    #main-info-container .name-with-icons {
+        justify-content: center;
+    }
+}
+
+#main-info-container .icons {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+#main-info-container .icons li {
+    margin-left: 10px;
+}
+
+#main-info-container .icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Other */
+.main-more-container {
+    width: 100%;
+    padding: 0 30px;
+    border-top: 50px solid transparent;
+    margin-top: -25px;
+}
+
+.main-bio-container {
+    margin: auto;
+    padding: 0 0em;
+    max-width: 1080px;
+    text-align: left;
+    padding-top: 0px;
+    max-width: 1080px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.main-bio-container .subtitle {
+    margin-top: 0px;
+    color: #566c7f;
+    font-family: Candara, Constantia, "Avenir Next", Palatino, Cambria, Times;
+}
+
+#main-pub-container {
+    margin: auto;
+    padding: 0 0em;
+    max-width: 1080px;
+    text-align: left;
+    max-width: 1080px
+}
+
+#main-pub-container .publication-with-selector {
+    display: flex;
+}
+
+#main-pub-container .subtitle {
+    color: #566c7f;
+    font-family: Candara, Constantia, "Avenir Next", Palatino, Cambria, Times;
+    margin-top: 15px;
+}
+
+#main-pub-container .subtitle a {
+    font-size: 18px;
+    color: #96a5b3;
+    font-weight: 400
+}
+
+#main-pub-container .subtitle a.activated {
+    color: #333333;
+    font-weight: 600
+}
+
+#main-pub-container .subtitle a.activated:focus,
+#main-pub-container .subtitle a.activated:hover {
+    text-decoration: none;
+    cursor: initial
+}
+
+#main-pub-container .subtitle-aux {
+    font-size: 1rem
+}
+
+#main-pub-container .subtitle-aux a.activated {
+    color: #333333
+}
+
+#main-pub-container .subtitle-aux a.activated:focus,
+#main-pub-container .subtitle-aux a.activated:hover {
+    text-decoration: none;
+    cursor: initial
+}
+
+#main-pub-container .subtitle-aux .note {
+    margin-left: 1em;
+    color: #999999;
+    text-decoration: none;
+    font-size: 14px
+}
+
+#main-pub-card-container {
+
+}
+
+#main-pub-card-container>h5 {
+    margin-bottom: 20px
+}
+
+#main-pub-card-container .pub-card {
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: 1rem
+}
+
+#main-pub-card-container .pub-card .col-l {
+    text-align: center;
+    padding-top: 10px
+}
+
+#main-pub-card-container .pub-card .col-r {
+    padding-top: 10px
+}
+
+#main-pub-card-container .pub-card img {
+    width: 100%;
+    margin: 0 auto
+}
+
+#main-pub-card-container .pub-card-body {
+    width: 100%;
+    background: transparent;
+    padding-left: 0px
+}
+
+#main-pub-card-container .pub-card .title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    line-height: 1.4
+}
+
+#main-pub-card-container .pub-card .authors {
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 4px;
+    line-height: 1.4
+}
+
+#main-pub-card-container .pub-card .authors a {
+    color: #666666
+}
+
+#main-pub-card-container .pub-card .authors u {
+    color: #333333;
+    font-weight: 600;
+    text-decoration: none
+}
+
+#main-pub-card-container .pub-card .conference {
+    color: #333333;
+    font-weight: 600
+}
+
+#main-pub-card-container .pub-card .note {
+    display: block;
+    color: #999999;
+    text-decoration: none;
+    font-size: 14px
+}
+
+#main-pub-card-container .pub-card .info {
+    margin-bottom: 0;
+}
+
+#main-pub-card-container .row {
+    margin: 0;
+    max-width: 961px;
+}
+
+#main-pub-card-container .col-l,
+#main-pub-card-container .col-r {
+    vertical-align: top;
+    display: inline-block;
+    margin: 0;
+    padding-left: 0px
+}
+
+#footer {
+    padding: 0 0 1.5em;
+    margin-top: 2rem;
+    min-width: 240px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 12px;
+    text-align: center;
+}
+
+#footer .container {
+    max-width: 540px;
+    padding: 0 45px;
+    position: relative
+}
+
+#footer .comic {
+    padding-right: 15px;
+}
+
+#footer .stat {
+    width: 60px;
+    overflow: hidden;
+    margin: 0 auto -25px;
+    padding-right: 15px;
+}
+
+#footer a {
+    color: #666666
+}
+
+#footer a:hover {
+    color: #333333
+}
+
+.bold {
+    font-weight: 600
+}
+
+.highlight {
+    color: #2274bb;
+    font-weight: 600
+}
+
+.highlight:hover {
+    color: #1673c5;
+    font-weight: 600
+}
+
+.hide {
+    display: none
+}
+
+.media-container {
+    position: relative;
+}
+
+.media-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* Adjust the fade-in duration as needed */
+}

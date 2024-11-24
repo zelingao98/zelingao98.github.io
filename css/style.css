@@ -1,0 +1,515 @@
+@font-face {
+    font-family: "Garamond";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Garamond"), url("font/Garamond.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Garamond Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Garamond Italic"), url("font/Garamond_Italic.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Garamond Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Garamond Medium"), url("font/Garamond Medium.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Garamond Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Garamond Bold"), url("font/Garamond_B.woff") format("woff");
+  }
+  
+  body {
+    font-family: "Garamond";
+    /* background-color: #f8f7debd; */
+    font-size: 16px;
+  }
+  
+  .content {
+    width: 1050px;
+    padding: 25px 50px;
+    margin: 20px auto;
+    /* background-color: #f8f7debd; */
+    box-shadow: 0px 0px 20px #999;
+    border-radius: 15px;
+  }
+  
+  table.pub_table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0px 10px;
+  }
+  
+  table.pub_table tr.focus {
+    background-color:lightgoldenrodyellow;
+  }
+  
+  td.pub_td1 {
+    height: 120px;
+    width: 180px;
+    padding: 10px;
+    /* outline: 1px solid gray; */
+  }
+   td.pub_td1 iframe {
+    margin-top: 10px;
+    margin-left: 40px;
+   }
+  
+  .box {
+    display: inline-block;
+    /* height: 25px; */
+    /*width: 70px;*/
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 2px 2px #DDE8FC; */
+    padding: 5px 10px;
+    background-color: #DDE8FC;
+    /* font-weight: bold; */
+    text-align: center;
+  }
+  
+  /* td.pub_td1 img {
+    height: 150px;
+    width: 180px;
+    /* outline: 1px solid gray; */
+  } */
+  
+  /* td.pub_td1 video {
+    height: 120px;
+    width: 180px;
+    /* outline: 1px solid gray; */
+  } */
+  
+  td.pub_td1 marquee img {
+    height: 120px;
+    width: 400px;
+  }
+  
+  td.pub_td2 {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    vertical-align: top;
+  }
+  
+  div#container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 950px;
+    text-align: left;
+    position: relative;
+    /* background-color: #f8f7debd; */
+  }
+  
+  div#DocInfo {
+    color: #1367a7;
+    /*font-weight: lighter;*/
+    height: 200px;
+    font-size: 18px;
+  }
+  div#intro {
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  
+  div.gallery {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  div.gallery > img {
+    
+    padding: 2px;
+    height: 90px;
+    width: auto;
+  
+  }
+  
+  div.logo {
+    text-align: center;
+  }
+  
+  div.logo > a img {
+    padding: 5px;
+    margin: 10px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  div.logo > a img:hover {
+    box-shadow: 0px 0px 10px rgba(0, 140, 186, 0.5);
+  }
+  
+  span.logo2 {
+    text-align: center;
+  }
+  
+  span.logo2 > a img {
+    padding: 5px;
+    margin: 10px 3px 10px 3px;
+    height: 70px;
+    border-radius: 10px;
+  }
+  
+  span.logo2 > a img:hover {
+    box-shadow: 0px 0px 10px rgba(0, 140, 186, 0.5);
+  }
+  
+  span.fa-stack > a > i.fab:hover, i.fas:hover {
+    margin-top: 10px;
+  }
+  
+  h4,
+  h3,
+  h2,
+  h1 {
+    font-family: "Garamond Bold";
+  }
+  
+  h1 {
+    color: #000000;
+  }
+  
+  h2 {
+    font-size: 130%;
+  }
+  
+  b,
+  strong {
+    font-family: "Garamond Bold";
+  }
+  
+  a {
+    font-family: "Garamond Medium";
+  }
+  
+  p {
+    color: #5b5b5b;
+    margin-bottom: 50px;
+  }
+  
+  p.caption {
+    color: #9b9b9b;
+    text-align: left;
+    width: 600px;
+  }
+  
+  p.caption2 {
+    color: #9b9b9b;
+    text-align: left;
+    width: 800px;
+  }
+  
+  #header_img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  
+  a:link,
+  a:visited {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  
+  
+  #demo_pic {
+    position: relative;
+    left: 15px;
+    right: 10px;
+    height: 150px;
+    top: 10px;
+  }
+  
+  #news_pic {
+    position: relative;
+    margin: 8px;
+    height: 60px;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    /* border-style: solid;
+    border-color: #666666;
+    border-width: 1px; */
+  }
+  
+  .fa-stack[data-count]:after {
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    top: 110%;
+    bottom: -40%;
+    content: attr(data-count);
+    font-size: 30%;
+    padding: 0.6em;
+    border-radius: 999px;
+    line-height: 0.75em;
+    color: white;
+    background: rgba(255, 0, 0, 0.8);
+    text-align: center;
+    min-width: 2em;
+    font-family: "Garamond Bold";
+    font-weight: bold;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    #school_logo {
+      position: absolute;
+      left: 700px;
+      height: 90px;
+    }
+  
+    #research_logo {
+      position: absolute;
+      left: 700px;
+      height: 100px;
+    }
+    #other_logo {
+      position: absolute;
+      left: 700px;
+      height: 100px;
+    }
+    #square_logo {
+      position: absolute;
+      left: 650px;
+      height: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #school_logo {
+      position: absolute;
+      visibility: hidden;
+      display: none;
+      left: 700px;
+      height: 100px;
+    }
+    #research_logo {
+      position: absolute;
+      visibility: hidden;
+      display: none;
+      left: 700px;
+      height: 100px;
+    }
+    #other_logo {
+      position: absolute;
+      visibility: hidden;
+      display: none;
+      left: 700px;
+      height: 100px;
+    }
+    #square_logo {
+      position: absolute;
+      left: 650px;
+      height: 100px;
+    }
+  }
+  
+  /* ICON LIST */
+  ul.icon-list {
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0px;
+    width: 720px;
+    /* margin-left: -30px; */
+  }
+  
+  ul.icon-list > a span {
+    border-radius: 10%;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  
+  td > pre {
+    font-size: 14px;
+    padding: 5px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+  
+  div.scrollbox {
+    height:120px;
+    width: 100%;
+    margin-left: auto;
+    /* border:3px solid #ccc; */
+    overflow:auto;
+  }
+  
+  hr {
+    border:none;
+    border-top:2px dashed rgba(63, 61, 61, 0.344);
+    color:#fff;
+    background-color:#fff;
+    height:2px;
+    width:100%;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  
+  span.fa-twitter:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  
+    color:#1DA1F2;
+  }
+  
+  span.ai-cv:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:brown;
+  }
+  
+  span.fa-facebook:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#4267B2;
+  }
+  
+  span.fa-file-alt:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:darkgoldenrod;
+  }
+  
+  span.ai-google-scholar:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#4285F4;
+  }
+  
+  span.ai-researchgate:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#14d4b4;
+  }
+  
+  span.fa-linkedin:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#1DA1F2;
+  }
+  
+  span.fa-youtube:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#FF0000;
+  }
+  
+  span.fa-github:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#4078c0;
+  }
+  
+  span.fa-bilibili:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#08a4d4;
+  }
+  
+  span.fa-zhihu:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+    color:#2864ff;
+  }
+  
+  img#huggingface:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+  
+  span.fa-envelope:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    
+  }
+  
+  iframe#gallery {
+    position: relative;
+    margin: 10px;
+    width: 30%;
+    height: auto;
+    border-radius: 10px !important;
+  }
+  
+  #huggingface { 
+    vertical-align: sub;
+  }

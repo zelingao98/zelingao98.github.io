@@ -1,267 +1,303 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<html>
+  <!-- * import party -->
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>
-      Zelin (Friday) Gao
-    </title>
-
-    <meta name="author" content="Zelin (Friday) Gao">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Zelin (Friday) Gao</title>
+    <link href="./css/style.css" rel="stylesheet" media="all" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" rel="stylesheet"/>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥳</text></svg>">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/57fb8d417e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      window.onload = choosePic;
+      var myPix = new Array("./assets/self/gang.jpeg");
+      function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture").src = myPix[randomNum];
+      }
+      function lastUpdate() {
+        var x = document.lastModified.substr(0, 10);
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
   </head>
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  <!-- your name here -->
-                  Zelin (Friday) Gao
-                </p>
-                <p>
-                  <!-- your bio here -->
-                  I am a Master (Sep. 2021 - Mar. 2024) student at College of Control Science and Engineering, <a href="https://www.zju.edu.cn">Zhejiang Unerveristy</a>.
-                  Before that, I obtatin my B.Eng (Sep. 2017 - Jun. 2021) from College of Instrumentation and Electrical Engineering, <a href="https://www.jlu.edu.cn">Jilin Unerveristy</a>.
-                </p>
-                <p>
-                  <!-- your bio here  -->
-                  I was a remote research intern at <a href="https://ccvl.jhu.edu/team">CCVL</a> in <a href="https://www.jhu.edu">Johns Hopkins University</a>, and working with <a href="https://yutongbai.com/">Yutong Bai</a>.
-                  <!-- Before that, I was a research intern at <a href="https://shlab.org.cn/pc/home">Shanghai AI Lab</a>, mentored by <a href="https://liuziwei7.github.io/">Prof. Ziwei Liu</a> at <a href="https://www.ntu.edu.sg/">Nanyang Technological University</a>.  -->
-                  I also work very closely with <a href="https://weichnn.github.io/">Prof. Weichen Dai</a> at Hangzhou Dianzi University and <a href="http://elkula.com/">Jiajun Jiang</a> at Alibaba Group.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:jamesgzl@zju.edu.cn">Email</a> &nbsp;/&nbsp;
-                  <a href="Bio/cv_en_gzl.pdf">Resume</a> &nbsp;/&nbsp;
-                  <a href="Bio/research_statement.pdf">Reasearch Statement</a> &nbsp;/&nbsp;
-                  <a href="https://twitter.com/Kuma_Scofield">Twitter</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/jameskuma/">Github</a>
-                </p>
+  <body onload="lastUpdate()">
+    <div class="content">
+      <div id="container">
+        <!-- * my personal link -->
+        <table>
+          <tbody>
+            <tr>
+              <!-- column one, is my self-portrait! -->
+              <td>
+                <img 
+                id="portrait" 
+                src="./assets/self/gang.jpeg" 
+                style="float: left; margin-top: 60px; margin-left: 60px; margin-bottom: 10px; border-radius: 10%;"
+                width="200px"/>
               </td>
-              <td style="padding:2.5%;width:30%;max-width:30%">
-                <a href="picture/gang.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="picture/qiyu.png" class="hoverZoomLink"></a>
+              <!-- column two, is my info! -->
+              <td>
+                <div id="DocInfo">
+                  <div id="intro">
+                    <h1 style="margin-bottom: 10px;"> Zelin Gao 郜泽霖 </h1>
+                    <div style="margin-bottom: 10px;">
+                      <a style="color: black" href="https://xiaolonw.github.io/index.html">
+                        State: 🔥 Run for 2025 PhD Application
+                      </a>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                      <a href="mailto: jamesgzl@zju.edu.cn">
+                        <span class="fa fa-envelope" style="color: navy; font-size: 20px">
+                          <span style="font-family: Garamond Bold">
+                            jamesgzl
+                          </span>
+                          <span class="fa fa-at" style="color: navy; font-size: 20px">
+                          <span style="font-family: Garamond Bold">
+                            zju.edu.cn
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                    <ul class="icon-list">
+                      <a style="color: black" href="./assets/self/cv.pdf">
+                        <span class="ai ai-cv fa-xl"></span>
+                      </a>
+                      <a style="color: black" href="https://scholar.google.com/citations?user=kvHYP9MAAAAJ&hl=zh-CN">
+                        <span class="ai ai-google-scholar fa-xl"></span>
+                      </a>
+                      <a style="color: black" href="https://github.com/jameskuma">
+                        <span class="fa-brands fa-github fa-xl"></span>
+                      </a>
+                      <a style="color: black" href="https://twitter.com/Kuma_Scofield">
+                        <span class="fa-brands fa-twitter fa-xl"></span>
+                      </a>
+                      <a style="color: black" href="https://space.bilibili.com/17005936">
+                        <span class="fa-brands fa-bilibili fa-xl"></span>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
               </td>
             </tr>
-          </tbody></table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2>Recent News</h2>
-              <p> [2024.02] Our paper is accepted by CVPR2024! </p>
-              <!-- <p> -->
-                <!-- [2023.08] <font color="red"><strong>I'm looking for PhD to start in Fall 2024. Please feel free to send emails if you have any leads!</strong></font> -->
-                <!-- [2024.01] <font color="red"><strong>GAP year starts and look forward to research intern!</strong></font> -->
-              <!-- </p> -->
-              <p> [2023.07] Our paper is accepted by ICCV2023! </p>
-              <p> [2022.06] Our paper is accepted by IROS2022&RAL! </p>
-            </td>
-          </tr>
-        </tbody></table>
-
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2>Research</h2>
-              <p>
-                My research interest lies in 3D Vision, especially in the field of Neural Rendering, Implicit Representation, and SLAM.
-                I also love 3D/4D Object Generation! Please check my github and see my implementation for Diffusion Model.
-                Representative papers are <span class="highlight">highlighted</span>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        
-          <tr onmouseout="ape_stop()" onmouseover="ape_start()"  bgcolor="#ffffd0">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <img src='picture/cvpr2024/cvpr2024.png' width="170">
+          </tbody>
+        </table>
+        <!-- * my bio -->
+        <table>
+          <tr>
+            <td>
+              <h1>Biography</h1>
+              <strong style="color: tomato;">
+                I am applying for 2025 PhD position. Please consider contacting me if you think my research interest aligns with yours.
+              </strong>
+              <hr>
+              <!-- segment line, above shows important message -->
+              <div style="color: black; margin-bottom: 10px;">
+                I am currently a research intern at <a style="font-weight: bold;" href="https://xiaolonw.github.io/">Xiaolong Wang's Gruop</a>.
+                I got M. Eng (2021-2024) in <a style="font-weight: bold;" href="http://www.cse.zju.edu.cn/cseenglish/main.htm">CSE Department</a> at <a style="font-weight: bold;" href="https://www.zju.edu.cn/">Zhejiang University</a>, where I was advised by Prof. Yu Zhang in IAS Lab.
+                I got my B. Eng (2017-2021) in <a style="font-weight: bold;" href="https://ciee.jlu.edu.cn/en/">EE Department</a> at <a style="font-weight: bold;" href="https://www.jlu.edu.cn/">Jilin University</a>, where I spent 4 wonderful years.
               </div>
-              <script type="text/javascript">
-                function ape_start() {
-                  document.getElementById('ape_image').style.opacity = "1";
-                }
-    
-                function ape_stop() {
-                  document.getElementById('ape_image').style.opacity = "0";
-                }
-                ape_stop()
-              </script>
+              <div style="color: black; margin-bottom: 10px;">
+                I feel so fortunate to collaborate with 
+                <a style="font-weight: bold;" href="https://jerryxu.net/">Dr. Jiarui Xu</a> and <a style="font-weight: bold;" href="https://xiaolonw.github.io/">Prof. Xiaolong Wang</a> at UCSD,
+                <a style="font-weight: bold;" href="https://yutongbai.com/">Dr. Yutong Bai</a> and <a style="font-weight: bold;" href="https://people.eecs.berkeley.edu/~kanazawa/">Prof. Angjoo Kanazawa</a> at UCB,
+                <a style="font-weight: bold;" href="https://weichnn.github.io/">Prof. Weichen Dai</a> at Hangzhou Dianzi University.
+                They are the ones who introduce me into the world of research and teach me what it means to be a good and honest researcher. 
+                They will always be my role models!
+              </div>
+              <div style="color: black;">
+                My research interest lies in Computer Vision, especially in the field of 3D/4D Reconstruction and Generation. 
+              </div>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Adaptive_Positional_Encoding_for_Bundle-Adjusting_Neural_Radiance_Fields_ICCV_2023_paper.pdf">
-                <span class="papertitle">SAP3D: The More You See in 2D, the More You Perceive in 3D</span>
-              </a>
-              <br>
-              <strong>Zelin Gao</strong>,
+          </tr>
+        </table>
+        <!-- * my recent news -->
+        <h1>News</h1>
+        <div style="height: 100px; overflow: auto">
+          <div>
+            [2024.04] GAP year starts! Hang on! I will get through these bad days.
+          </div>
+          <div>
+            [2024.03] I defend my thesis and receive my master's degree!
+          </div>
+          <div>
+            [2024.02] Our paper is accepted by CVPR2024 as Highlight!
+          </div>
+          <div>
+            [2023.07] Our paper is accepted by ICCV2023!
+          </div>
+          <div>
+            [2022.06] Our paper is accepted by IROS2022&RAL as Oral Presentation!
+          </div>
+        </div>
+
+        <h1>Publications</h1>
+        Representative works are <span style="background-color: lightgoldenrodyellow">highlighted</span> (# denotes equal contribution)
+
+        <table class="pub_table">
+          <tr id="cvpr2024sap3d" class="focus">
+            <td class="pub_td1">
+              <img src="./assets/teasers/spa3d_cvpr2024.png" height="150px" width="180px">
+            </td>
+            <td class="pub_td2">
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <strong>SAP3D: The More You See in 2D, the More You Perceive in 3D</strong>
+              </div>
+              Xinyang Han,
+              <u>Zelin Gao#</u>,
               <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>,
               <a href="https://shubham-goel.github.io/">Shubham Goel</a>,
-              <a href="https://yossigandelsman.github.io/">Yossi Gandelsman</a>,
-              <br>
-              <em>CVPR</em>, 2024 <font color="red"><strong>(Highlight)</strong></font>
-              <br>
-              <a href="http://jameskuma.github.io">project page</a>
-              /
-              <a href="http://jameskuma.github.io">video</a>
-              /
-              <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Adaptive_Positional_Encoding_for_Bundle-Adjusting_Neural_Radiance_Fields_ICCV_2023_paper.pdf">paper</a>
-              <p></p>
-              <p>
+              <a href="https://yossigandelsman.github.io/">Yossi Gandelsman</a>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                CVPR 2024, <strong style="color: brown">Highlight</strong>
+              </div>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <a class="box" href="https://sap3d.github.io/">
+                  <i class="fas fa-home" aria-hidden="true">&nbsp;</i>
+                  Home&nbsp;
+                </a>
+                <a class="box" href="https://arxiv.org/abs/2404.03652">
+                  <i class="fa fa-file-lines" aria-hidden="true">&nbsp;</i>
+                  Paper&nbsp;
+                </a>
+                <a class="box" href="https://github.com/sap3d/Sap3D">
+                  <i class="fa fa-github" aria-hidden="true">&nbsp;</i>
+                  Code
+                </a>
+              </div>
+              <div>
                 Humans can infer 3D structure from 2D images of an object based on past experience and improve their 3D understanding as they see more images. 
-                Inspired by this behavior, we introduce SAP3D, a system for 3D reconstruction and novel view synthesis from an arbitrary number of unposed images. 
-              </p>
+                Inspired by this behavior, we introduce SAP3D, a system for 3D reconstruction and novel view synthesis from an arbitrary number of unposed images.
+              </div>
             </td>
           </tr>
 
-      <tr onmouseout="ape_stop()" onmouseover="ape_start()"  bgcolor="#ffffd0">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='ape_image'><video  width="190" height="140" muted autoplay loop>
-            <source src="picture/iccv2023/ape.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video></div>
-            <img src='picture/iccv2023/ape.png' width="170">
+          <tr id="arxiv2023hgnerf">
+            <td class="pub_td1">
+              <img src="./assets/teasers/hgnerf_arxiv2023.png" height="120px" width="180px">
+            </td>
+            <td class="pub_td2">
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <strong>HG3-NeRF: Hierarchically Guided Neural Radiance Fields for Sparse View Inputs</strong>
+              </div>
+              <u>Zelin Gao</u>,
+              <a href="https://weichnn.github.io/">Weichen Dai</a>,
+              <a href="https://person.zju.edu.cn/en/zhangyu">Yu Zhang</a>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                ARXIV 2023
+              </div>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <a class="box" href="https://sap3d.github.io/">
+                  <i class="fas fa-home" aria-hidden="true">&nbsp;</i>
+                  Home&nbsp;
+                </a>
+                <a class="box" href="https://arxiv.org/abs/2401.11711">
+                  <i class="fa fa-file-lines" aria-hidden="true">&nbsp;</i>
+                  Paper&nbsp;
+                </a>
+                <a class="box" href="https://github.com/sap3d/Sap3D">
+                  <i class="fa fa-github" aria-hidden="true">&nbsp;</i>
+                  Code
+                </a>
+              </div>
+              <div>
+                To represent the neural radiance fields from sparse view inputs,
+                we propose hierarchical geometric guidance (HGG) to sample volume points with the depth prior 
+                and 
+                hierarchical semantic guidance (HSG) to supervise semantic consistency of the complex real-world scenarios using CLIP.
+              </div>
+            </td>
+          </tr>
+
+          <tr id="iccv2023apenerf" class="focus">
+            <td class="pub_td1">
+              <video autoplay loop muted height="120px" width="180px">
+                <source src="./assets/teasers/apenerf_iccv2023.mp4" type=video/mp4>
+              </video>
+            </td>
+            <td class="pub_td2">
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <strong>Adaptive Positional Encoding for Bundle-Adjusting Neural Radiance Fields</strong>
+              </div>
+              <u>Zelin Gao</u>,
+              <a href="https://weichnn.github.io/">Weichen Dai</a>,
+              <a href="https://person.zju.edu.cn/en/zhangyu">Yu Zhang</a>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                ICCV 2023
+              </div>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <a class="box" href="https://sap3d.github.io/">
+                  <i class="fas fa-home" aria-hidden="true">&nbsp;</i>
+                  Home&nbsp;
+                </a>
+                <a class="box" href="https://arxiv.org/abs/2404.03652">
+                  <i class="fa fa-file-lines" aria-hidden="true">&nbsp;</i>
+                  Paper&nbsp;
+                </a>
+                <a class="box" href="https://github.com/sap3d/Sap3D">
+                  <i class="fa fa-github" aria-hidden="true">&nbsp;</i>
+                  Code
+                </a>
+              </div>
+              <div>
+                Adaptive Positional Encoding is proposed to train neural radiance fields from unknwon camera poses (or even initrinics).
+                The theoretical relationship between Positional Encoding and Fourier Series Regression is investigated to prove that learnable frequencies can improve both camera parameter estimation and NVS qualiy.
+              </div>
+            </td>
+          </tr>
+
+          <tr id="iros2022slam">
+            <td class="pub_td1">
+              <img src="./assets/teasers/tislam_iross2022.jpg" height="90px" width="180px">
+            </td>
+            <td class="pub_td2">
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <strong>Thermal-Inertial SLAM for the Environments with Challenging Illumination</strong>
+              </div>
+              Jiajun Jiang,
+              <a href="https://weichnn.github.io/">Weichen Dai</a>,
+              Xingxin Chen,
+              <u>Zelin Gao</u>,
+              <a href="https://person.zju.edu.cn/en/zhangyu">Yu Zhang</a>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                IROS2022&RAL, <strong style="color: brown">Oral Presentation</strong>
+              </div>
+              <div style="margin-top: 5px; margin-bottom: 5px">
+                <a class="box" href="https://www.bilibili.com/video/BV1T94y1U7Ec/?vd_source=59aacd2e402d02cfc05c523d11873aa7">
+                  <i class="fas fa-home" aria-hidden="true">&nbsp;</i>
+                  Home&nbsp;
+                </a>
+                <a class="box" href="https://ieeexplore.ieee.org/document/9804793">
+                  <i class="fa fa-file-lines" aria-hidden="true">&nbsp;</i>
+                  Paper&nbsp;
+                </a>
+              </div>
+              <div>
+                Thermal images are used in this paper to realize a robust visual SLAM system in challenging environment. 
+                The proposed method, a thermal-inertial SLAM system, represents several improvements, including SVD-based image processing and Thermal-RAFT tracking methods.
+              </div>
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- * update time -->
+        <div align="center">
+          <div>
+            <script
+              type="text/javascript"
+              src="//rf.revolvermaps.com/0/0/6.js?i=5defqxh6kgm&amp;m=1&amp;c=ff0000&amp;cr1=ffffff&amp;f=ubuntu&amp;l=0&amp;s=300&amp;bv=100&amp;hi=20"
+              async="async"
+            ></script>
           </div>
-          <script type="text/javascript">
-            function ape_start() {
-              document.getElementById('ape_image').style.opacity = "1";
-            }
-
-            function ape_stop() {
-              document.getElementById('ape_image').style.opacity = "0";
-            }
-            ape_stop()
-          </script>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Adaptive_Positional_Encoding_for_Bundle-Adjusting_Neural_Radiance_Fields_ICCV_2023_paper.pdf">
-            <span class="papertitle">Adaptive Positional Encoding for Bundle-Adjusting Neural Radiance Fields</span>
-          </a>
-          <br>
-          <strong>Zelin Gao</strong>,
-          <a href="https://weichnn.github.io/">Weichen Dai</a>,
-          <a href="https://person.zju.edu.cn/en/zhangyu">Yu Zhang</a>
-          <br>
-          <em>ICCV</em>, 2023
-          <br>
-          <a href="http://jameskuma.github.io">project page</a>
-          /
-          <a href="http://jameskuma.github.io">video</a>
-          /
-          <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Adaptive_Positional_Encoding_for_Bundle-Adjusting_Neural_Radiance_Fields_ICCV_2023_paper.pdf">paper</a>
-          <p></p>
-          <p>
-          Adaptive Positional Encoding is proposed in this paper to train neural radiance fields from unknwon camera poses (or even initrinics). 
-          The theoretical relationship between Positional Encoding and Fourier Series Regression is investigated to prove that learnable frequencies can improve both accuracy of camera parameter estimation and view synthesis quality of scene representation.
-          </p>
-        </td>
-      </tr>
-
-      <tr onmouseout="tslam_stop()" onmouseover="tslam_start()"  >
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='picture/arxiv2023/hg3nerf.png' width=170>
-          </div>
-          <script type="text/javascript">
-            function tslam_start() {
-              document.getElementById('tslam_image').style.opacity = "1";
-            }
-
-            function tslam_stop() {
-              document.getElementById('tslam_image').style.opacity = "0";
-            }
-            tslam_stop()
-          </script>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="http://jameskuma.github.io">
-            <span class="papertitle">HG3-NeRF: Hierarchical Geometric, Semantic, and Photometric Guided Neural Radiance Fields for Sparse View Inputs</span>
-          </a>
-          <br>
-          <strong>Zelin Gao</strong>,
-          <a href="https://weichnn.github.io/">Weichen Dai</a>,
-          <a href="https://person.zju.edu.cn/en/zhangyu">Yu Zhang</a>
-          <br>
-          <em>ARXIV</em>, 2023
-          <br>
-          <a href="http://jameskuma.github.io">project page</a>
-          /
-          <a href="https://www.bilibili.com/video/BV1T94y1U7Ec">video</a>
-          /
-          <a href="https://arxiv.org/abs/2401.11711">arxiv</a>
-          <p></p>
-          <p>
-            In this paper, we exploit the geometric, semantic, and photometric guidance to represent the neural radiance fields from sparse view inputs. 
-            We propose hierarchical geometric guidance (HGG) to sample volume points with the depth prior and hierarchical semantic guidance (HSG) to supervise semantic consistency of the complex real-world scenarios using CLIP.
-          </p>
-        </td>
-      </tr>
-
-      <tr onmouseout="tslam_stop()" onmouseover="tslam_start()"  >
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='picture/iros2022/tislam.jpg' width="170">
-          </div>
-          <script type="text/javascript">
-            function tslam_start() {
-              document.getElementById('tslam_image').style.opacity = "1";
-            }
-
-            function tslam_stop() {
-              document.getElementById('tslam_image').style.opacity = "0";
-            }
-            tslam_stop()
-          </script>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="http://jameskuma.github.io">
-            <span class="papertitle">Thermal-Inertial SLAM for the Environments with Challenging Illumination</span>
-          </a>
-          <br>
-          <a href="http://elkula.com/">Jiajun Jiang</a>,
-          <a href="https://weichnn.github.io/">Weichen Dai</a>,
-          Xingxin Chen,
-          <strong>Zelin Gao</strong>,
-          <a href="https://person.zju.edu.cn/en/zhangyu">Yu Zhang</a>
-          <br>
-          <em>RAL&IROS</em>, 2022 <font color="red"><strong>(Oral Presentation)</strong></font>
-          <br>
-          <a href="http://jameskuma.github.io">project page</a>
-          /
-          <a href="https://www.bilibili.com/video/BV1T94y1U7Ec">video</a>
-          /
-          <a href="https://ieeexplore.ieee.org/document/9804793">ieee</a>
-          <p></p>
-          <p>
-          Thermal images are used in this paper to realize a robust visual SLAM system in challenging environment. 
-          The proposed method, a thermal-inertial SLAM system, represents several improvements, including SVD-based image processing and Thermal-RAFT tracking methods.
-          </p>
-        </td>
-      </tr>
-
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  😂 This page is stolen from  <a href="https://jonbarron.info/"">Jon Barron</a>. 😂
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
+          <strong>
+            <p style="text-align: right; margin-bottom: 0px; font-size: smaller;">
+              This page is stolen from <a href="https://xiuyuliang.cn/">Prof. Yuliang Xiu</a>. His website looks really nice! Big thanks!
+            </p>
+          </strong>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
