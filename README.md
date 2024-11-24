@@ -1,1 +1,1 @@
-Zelin website is here! The template is from 'https://xiuyuliang.cn'.
+Zelin website is here! The template is from https://xiuyuliang.cn.
