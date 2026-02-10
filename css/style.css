@@ -28,7 +28,7 @@
   
   body {
     font-family: "Garamond";
-    /* background-color: #f8f7debd; */
+    background-color: #FFFCF8;
     font-size: 16px;
   }
   
@@ -36,7 +36,7 @@
     width: 1050px;
     padding: 25px 50px;
     margin: 20px auto;
-    /* background-color: #f8f7debd; */
+    background-color: #FFFFFF;
     box-shadow: 0px 0px 20px #999;
     border-radius: 15px;
   }
