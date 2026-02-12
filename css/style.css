@@ -541,3 +541,80 @@
 .pub-links a i {
   font-size: 12px;
 }
+
+/* Publication 卡片容器 */
+.pub-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #f0f0f0; /* 边框颜色 */
+  border-radius: 12px;       /* 圆角 */
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease; /* 动画过渡效果 */
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* 初始微弱阴影 */
+}
+
+/* 鼠标悬停（浮动）效果 */
+.pub-card:hover {
+  transform: translateY(-8px); /* 向上位移 */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1); /* 增强阴影，产生浮动感 */
+  border-color: #e0e0e0;
+}
+
+/* 左侧缩略图容器 */
+.pub-card-image {
+  flex-shrink: 0;
+  width: 280px;
+  margin-right: 30px;
+}
+
+.pub-card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* 右侧文字内容 */
+.pub-card-content {
+  flex-grow: 1;
+}
+
+.pub-card-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.pub-card-venue {
+  color: #607d8b;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  font-weight: bold;
+}
+
+.pub-card-authors {
+  font-size: 0.95em;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* 链接样式 */
+.pub-card-links {
+  margin-top: 10px;
+}
+
+.pub-card-links a {
+  margin-right: 12px;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #007bff; /* 链接颜色 */
+}
+
+.pub-card-links a:hover {
+  text-decoration: underline;
+}
