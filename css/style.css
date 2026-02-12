@@ -591,7 +591,7 @@
 }
 
 .pub-card-venue {
-  color: #607d8b;
+  color: #007bff;
   margin-bottom: 8px;
   font-size: 0.95em;
   font-weight: bold;
@@ -606,13 +606,6 @@
 /* 链接样式 */
 .pub-card-links {
   margin-top: 10px;
-}
-
-.pub-card-links a {
-  margin-right: 12px;
-  font-size: 0.9em;
-  text-decoration: none;
-  color: #007bff; /* 链接颜色 */
 }
 
 .pub-card-links a:hover {
