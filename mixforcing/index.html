@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mix Forcing: Causal Pre-Training via Mixture Attention for Interactive World Models. A research project on camera-controlled exploration, online prompt interaction, and one-hour autoregressive world simulation.">
+  <meta name="author" content="Zelin Gao, Hao Ouyang, Jiapeng Zhu, Qiuyu Wang, Jingye Chen, Zichen Liu, Xing Zhu, Yujun Shen, Yinghao Xu">
+  <meta name="citation_title" content="Mix Forcing: Causal Pre-Training via Mixture Attention for Interactive World Models">
+  <meta name="citation_author" content="Zelin Gao">
+  <meta name="citation_author" content="Hao Ouyang">
+  <meta name="citation_author" content="Jiapeng Zhu">
+  <meta name="citation_author" content="Qiuyu Wang">
+  <meta name="citation_author" content="Jingye Chen">
+  <meta name="citation_author" content="Zichen Liu">
+  <meta name="citation_author" content="Xing Zhu">
+  <meta name="citation_author" content="Yujun Shen">
+  <meta name="citation_author" content="Yinghao Xu">
+  <!-- Add citation_pdf_url when the arXiv paper is available. -->
+  <meta property="og:title" content="Mix Forcing: Causal Pre-Training via Mixture Attention for Interactive World Models">
+  <meta property="og:description" content="Causal video generation with camera control, online prompt interaction, and one-hour rollouts. A research project from HKUST and Robbyant.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zelingao98.github.io/mixforcing/">
+  <meta name="color-scheme" content="light">
+  <title>Mix Forcing: Causal Pre-Training via Mixture Attention for Interactive World Models</title>
+  <link rel="canonical" href="https://zelingao98.github.io/mixforcing/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cmunrm.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/cmunbx.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project.css?v=20261023q">
+  <link rel="stylesheet" href="method-animation.css?v=20261023g">
+  <script src="assets.js" defer></script>
+  <script src="keyboard.js" defer></script>
+  <script src="events.js" defer></script>
+  <script src="quality-chart.js" defer></script>
+  <script src="site.js?v=20261023a" defer></script>
+  <script src="project.js?v=20261023g" defer></script>
+  <script src="method-animation.js?v=20261023g" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="Mix Forcing home">Mix Forcing</a>
+      <nav class="project-nav" aria-label="Project sections">
+        <a href="#overview">Overview</a>
+        <a href="#comparison">Comparisons</a>
+        <a href="#long-rollout">Long rollouts</a>
+        <a href="#memory">Scene revisiting</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="project-title">
+      <div class="hero-inner">
+        <h1 id="project-title"><span>Mix</span> Forcing</h1>
+        <p class="hero-subtitle">Causal Pre-Training via Mixture Attention for Interactive World Models</p>
+        <p class="project-lineage">Core method of <a href="https://technology.robbyant.com/lingbot-world-v2" target="_blank" rel="noopener">LingBot-World-Infinity <span aria-hidden="true">↗</span></a></p>
+        <div class="project-authors" aria-label="Paper authors">
+          <div class="author-row">
+            <span><a href="https://zelingao98.github.io/" target="_blank" rel="noopener">Zelin Gao</a><sup>1</sup></span>
+            <span><a href="https://ken-ouyang.github.io/" target="_blank" rel="noopener">Hao Ouyang</a><sup>2,‡</sup></span>
+            <span><a href="https://scholar.google.com/citations?user=-ACBm-gAAAAJ&amp;hl=en" target="_blank" rel="noopener">Jiapeng Zhu</a><sup>2</sup></span>
+            <span><a href="https://scholar.google.com/citations?user=VRsy9v8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Qiuyu Wang</a><sup>2</sup></span>
+            <span><a href="https://jingyechen.github.io/" target="_blank" rel="noopener">Jingye Chen</a><sup>1</sup></span>
+            <span><a href="https://zliucz.github.io/" target="_blank" rel="noopener">Zichen Liu</a><sup>1</sup></span>
+          </div>
+          <div class="author-row">
+            <span><a href="https://scholar.google.com/citations?user=Hnh87z4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Xing Zhu</a><sup>2</sup></span>
+            <span><a href="https://shenyujun.github.io/" target="_blank" rel="noopener">Yujun Shen</a><sup>2</sup></span>
+            <span><a href="https://justimyhxu.github.io/" target="_blank" rel="noopener">Yinghao Xu</a><sup>1,†</sup></span>
+          </div>
+        </div>
+        <div class="project-affiliations">
+          <p class="project-affiliation"><sup>1</sup>The Hong Kong University of Science and Technology <span>(HKUST)</span></p>
+          <p class="project-affiliation"><sup>2</sup>Robbyant</p>
+        </div>
+        <p class="project-roles"><span><sup>‡</sup>Project Lead</span><span><sup>†</sup>Corresponding Author</span></p>
+        <div class="project-actions">
+          <!-- Add the arXiv URL here after publication and restore this as a link. -->
+          <button class="project-button project-button-pending" type="button" disabled title="arXiv link coming soon"><span class="resource-brand-icon" aria-hidden="true"><img class="brand-monochrome" src="assets/icons/arxiv-logomark-monochrome.svg" width="22" height="22" alt=""><img class="brand-color" src="assets/icons/arxiv-logomark.svg" width="22" height="22" alt=""></span>Paper</button>
+          <a class="project-button project-button-quiet" href="https://github.com/robbyant/lingbot-world-v2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.63 0c2.15-1.46 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.28-5.14 5.56.4.35.76 1.04.76 2.1v3.07c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg>GitHub Code</a>
+          <a class="project-button project-button-quiet" href="https://huggingface.co/collections/robbyant/lingbot-world-v2" target="_blank" rel="noopener"><span class="resource-brand-icon" aria-hidden="true"><img class="brand-monochrome" src="assets/icons/hf-logo-outline.svg?v=20261023b" width="22" height="22" alt=""><img class="brand-color" src="assets/icons/hf-logo.svg" width="22" height="22" alt=""></span>Hugging Face</a>
+        </div>
+        <figure class="hero-demo">
+          <video id="teaser-video" controls muted playsinline loop preload="metadata" poster="assets/posters/causal-pretrain-teaser.jpg" aria-label="One-minute rollout from our causally pretrained video model">
+            <source src="assets/teaser/causal-pretrain-1min.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <figcaption>A rollout from our causally pretrained video model.</figcaption>
+        </figure>
+        <div class="hero-chapters">
+          <div class="chapter-heading"><span class="overline">MOMENTS ALONG THE WAY</span><span>Video time · click a frame to jump</span></div>
+          <div class="chapter-grid" id="teaser-chapters" role="group" aria-label="One-minute rollout milestones"></div>
+          <p class="player-message" id="teaser-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap section-card" id="overview" aria-labelledby="overview-title">
+      <div class="section-intro"><h2 id="overview-title" class="section-title">Overview</h2></div>
+      <p class="overview-copy">Mix Forcing combines teacher forcing and bidirectional training to learn causal video generation while preserving pretrained visual priors. With chunk-wise prompt conditioning and four-step distillation, it enables autoregressive world simulation with camera control, online text updates, and one-hour rollouts. <span id="method-description">Trained with MoBA masks, the model generates video chunks using current inputs and cached history.</span></p>
+      <figure class="method-figure" id="method">
+        <div class="method-animation" id="method-animation" aria-label="Animated autoregressive video generation" aria-describedby="method-description" hidden></div>
+        <a class="method-static" href="assets/figures/method-overview.png" target="_blank" rel="noopener" aria-label="Open the full-size Mix Forcing method diagram">
+          <img src="assets/figures/method-overview.png" width="1584" height="525" loading="lazy" alt="Mix Forcing generates successive video chunks from an initial image, camera poses, local prompts, and a shared environment prompt, using a causal video model with MoBA attention and a KV cache.">
+        </a>
+      </figure>
+      <div class="method-details">
+        <article><h3>Mix the training modes</h3><p>MoBA attention combines teacher forcing for causal next-chunk prediction with bidirectional training to preserve visual priors.</p></article>
+        <article><h3>Condition each chunk</h3><p>Chunk-wise cross-attention uses a shared environment prompt and the current local prompt, without exposing future instructions to the current chunk.</p></article>
+        <article><h3>Distill for rollout</h3><p>Consistency and distribution matching distillation turn the causal initialization into a four-step autoregressive generator.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap section-card" id="comparison" aria-labelledby="comparison-title">
+      <div class="section-intro"><h2 id="comparison-title" class="section-title">Qualitative Comparisons</h2><p>Compare six interactive world models under the same scene and control sequence.<br>Choose camera-controlled exploration or online prompt interaction, then play the results together.</p></div>
+      <div class="scene-heading"><span class="overline">SELECT A SCENE</span></div>
+      <div class="scene-selector" id="scene-selector" role="group" aria-label="Comparison scene"></div>
+      <div class="comparison-context"><div><span class="context-dot"></span><strong id="scene-name"></strong><span id="scene-category"></span></div><details><summary>Scene prompt</summary><p id="scene-prompt"></p></details></div>
+      <div class="comparison-grid" id="comparison-grid"></div>
+      <div class="transport" role="group" aria-label="Synchronized video controls">
+        <button class="play-button" id="comparison-play" type="button"><span aria-hidden="true">▶</span> Play all</button>
+        <button class="icon-button" id="comparison-restart" type="button" aria-label="Restart all comparison videos" title="Restart all">↺</button>
+        <label class="sr-only" for="comparison-seek">Comparison timeline</label><input id="comparison-seek" class="timeline" type="range" min="0" max="1000" value="0" step="1">
+        <output id="comparison-time" class="time-readout">00:00 / 00:00</output>
+        <label class="sr-only" for="comparison-speed">Comparison playback speed</label><select id="comparison-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select>
+      </div>
+      <p class="player-message" id="comparison-status" role="status" aria-live="polite">Choose a scene, then play all six videos together.</p>
+      <section class="event-timeline" id="event-timeline" aria-label="Event timeline" hidden></section>
+    </section>
+
+    <section class="section wrap section-card" id="long-rollout" aria-labelledby="rollout-title">
+      <div class="section-intro"><h2 id="rollout-title" class="section-title">Long-Horizon Interaction</h2><p>A recorded interactive model rollout.<br> Follow the journey, or jump to a moment below.</p></div>
+      <div class="cinema-frame"><video id="long-video" controls playsinline preload="none" aria-label="One-hour interactive model rollout"></video><div class="cinema-caption"><span><span class="live-dot"></span> ONE-HOUR INTERACTIVE ROLLOUT</span><label>Playback <select id="long-speed" aria-label="Long rollout playback speed"><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option><option value="8">8×</option><option value="16">16×</option></select></label></div></div>
+      <div class="chapter-heading"><span class="overline">MOMENTS ALONG THE WAY</span><span>Video time · click a frame to jump</span></div>
+      <div class="chapter-grid" id="chapter-grid" role="group" aria-label="One-hour rollout chapters"></div>
+      <p class="player-message" id="long-status" role="status" aria-live="polite"></p>
+      <figure class="rollout-quality" id="rollout-quality"></figure>
+    </section>
+
+    <section class="section wrap section-card" id="memory" aria-labelledby="memory-title">
+      <div class="section-intro"><h2 id="memory-title" class="section-title">Scene Revisiting</h2><p>A landmark revisit sequence.<span class="memory-description-line">The camera looks away, then returns to the waterfall and red foliage seen earlier.</span></p></div>
+      <div class="cinema-frame memory-player"><video id="memory-video" controls muted playsinline preload="none" aria-label="Scene revisiting rollout"></video></div>
+      <p class="player-message" id="memory-status" role="status" aria-live="polite"></p>
+      <div class="memory-legend"><span><i class="landmark-a">A</i> Waterfall</span><span><i class="landmark-b">B</i> Red foliage</span><span class="legend-note">Same sequence · actual frame timestamps</span></div>
+      <div class="memory-grid" id="memory-grid" role="group" aria-label="Memory rollout timeline"></div>
+      <div class="memory-footer"><span class="memory-trace"><b class="text-a">A</b><span>→</span><b class="text-b">B</b><span>→</span><span>look away</span><span>→</span><b class="text-b">B</b><span>→</span><b class="text-a">A</b></span><p>Click a frame to jump to that moment in the video.</p></div>
+    </section>
+
+    <section class="section wrap section-card" id="citation" aria-labelledby="citation-title">
+      <div class="section-intro citation-heading">
+        <h2 id="citation-title" class="section-title">Citation</h2>
+        <div class="citation-actions">
+          <button class="project-button project-button-quiet" id="citation-copy" type="button">Copy BibTeX</button>
+          <a class="citation-download" href="assets/mix-forcing.bib" download>Download .bib <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <pre class="citation-code" id="citation-code" tabindex="0" aria-label="BibTeX citation"><code>@misc{gao2026mixforcing,
+  title = {Mix Forcing: Causal Pre-Training via Mixture Attention for Interactive World Models},
+  author = {Gao, Zelin and Ouyang, Hao and Zhu, Jiapeng and Wang, Qiuyu and Chen, Jingye and Liu, Zichen and Zhu, Xing and Shen, Yujun and Xu, Yinghao},
+  year = {2026},
+  url = {https://zelingao98.github.io/mixforcing/}
+}</code></pre>
+      <p class="citation-status" id="citation-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap project-footer">
+    <div class="footer-identity"><a href="https://hkust-xulab.com/">XU Lab · HKUST</a><p>Mix Forcing · Interactive world models</p></div>
+    <a href="#top" class="back-top">Back to top ↑</a>
+  </footer>
+  <dialog id="media-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><h2 id="dialog-title">Demo</h2><button class="icon-button" id="dialog-close" aria-label="Close enlarged media">✕</button></div><div id="dialog-content"></div></dialog>
+  <noscript><p class="noscript-message">Enable JavaScript to select scenes and use the interactive video controls.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* Original PDF artwork remains intact; overlays show an automatic inference loop. */
+.method-animation[hidden], .method-static[hidden] { display: none; }
+.method-figure figcaption > a { color: var(--accent); white-space: nowrap; }
+.method-animation { padding: 20px 0 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.method-canvas-scroll { overflow-x: auto; padding: 0 18px 14px; scrollbar-width: thin; scrollbar-color: #bebcc7 #f6f5f8; }
+.method-canvas { display: block; width: 100%; min-width: 980px; height: auto; overflow: visible; }
+.method-canvas text { font-family: 'Maple Mono', 'Maple Mono NF', ui-monospace, SFMono-Regular, monospace; fill: #141414; }
+.diagram-heading { font-size: 24px; }
+.diagram-mask-heading { font-size: 18px; font-weight: 600; }
+.diagram-mask-subtitle { font-size: 12.5px; }
+.diagram-expand { font-size: 22px; }
+.diagram-callout-lines { fill: none; stroke: #4f4d59; stroke-width: 1.8; }
+.diagram-mask-frame { fill: #fff; stroke: #181818; stroke-width: 1.6; }
+.diagram-mask-link { cursor: zoom-in; }
+.diagram-mask-link:hover .diagram-mask-frame { stroke-width: 3; }
+.diagram-mask-link:focus { outline: none; }
+.diagram-mask-link:focus-visible .diagram-mask-frame { stroke: #555fff; stroke-width: 3; }
+.diagram-overlays { pointer-events: none; }
+.diagram-model, .diagram-input, .diagram-output, .diagram-environment { fill: none; stroke: #171717; stroke-width: 4; opacity: 0; }
+.diagram-future-veil { opacity: 0; transition: opacity .35s ease; }
+.diagram-future-veil rect { fill: #fff; }
+.is-future .diagram-future-veil { opacity: .6; }
+.diagram-output-placeholder { fill: #f4f2f7; stroke: #cbc5d8; stroke-width: 1.5; }
+.diagram-output-cover { clip-path: inset(0); }
+.diagram-output-cover text { font-size: 17px; fill: #5c546c; }
+.diagram-output-cover .diagram-wait-label { font-size: 12px; fill: #847c93; }
+.is-complete .diagram-output-cover,
+.method-animation[data-phase="cache"] .is-current .diagram-output-cover { opacity: 0; }
+.method-animation[data-phase="decode"] .is-current .diagram-output-cover { animation: diagram-reveal 1s cubic-bezier(.2,.7,.2,1) forwards; }
+.diagram-model-scan, .diagram-model-progress { opacity: 0; }
+.diagram-scan-beam { fill: url(#model-scan-gradient); }
+.diagram-model-progress { fill: #74658f; transform: scaleX(0); }
+.diagram-flow { opacity: 0; }
+.diagram-packet { fill: #17121f; stroke: #fff; stroke-width: 2; }
+.diagram-model-hit { fill: transparent; stroke: none; cursor: zoom-in; }
+.diagram-model-link:hover .diagram-model-hit { stroke: #171717; stroke-width: 3; }
+.diagram-model-link:focus { outline: none; }
+.diagram-model-link:focus-visible .diagram-model-hit { stroke: #555fff; stroke-width: 3; }
+.method-animation .is-current .diagram-model { opacity: 1; stroke-width: 4; filter: drop-shadow(0 0 5px #b9afd2); }
+.method-animation[data-phase="condition"] .is-current .diagram-input,
+.method-animation[data-phase="condition"] .diagram-environment,
+.method-animation[data-phase="decode"] .is-current .diagram-output { opacity: 1; }
+.method-animation[data-phase="generate"] .is-current .diagram-model-scan,
+.method-animation[data-phase="generate"] .is-current .diagram-model-progress { opacity: 1; }
+.method-animation[data-phase="generate"] .is-current .diagram-scan-beam { animation: diagram-scan 1.3s linear infinite; }
+.method-animation[data-phase="generate"] .is-current .diagram-model-progress { animation: diagram-generate 1.3s ease-in-out infinite; }
+.method-animation[data-phase="condition"] .is-current .diagram-condition,
+.method-animation[data-phase="decode"] .is-current .diagram-decode,
+.method-animation[data-phase="cache"] .is-current .diagram-cache { opacity: 1; }
+.diagram-packet { animation: diagram-packet-travel .8s linear infinite; }
+.method-animation .diagram-overlays * { animation-play-state: paused; }
+.method-animation.is-playing .diagram-overlays * { animation-play-state: running; }
+@keyframes diagram-packet-travel {
+  0% { transform: translate(0, 0); opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { transform: translate(var(--packet-x), var(--packet-y)); opacity: 0; }
+}
+@keyframes diagram-scan { from { transform: translateX(0); } to { transform: translateX(282px); } }
+@keyframes diagram-generate { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes diagram-reveal { from { clip-path: inset(0); } to { clip-path: inset(0 0 0 100%); } }
+.method-animation-readout { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; padding: 12px 20px 9px; border-top: 1px solid var(--line); font-size: 12px; }
+.method-current-chunk { color: #332a44; font-weight: 600; white-space: nowrap; }
+.method-stages { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.method-stages li { display: flex; align-items: center; gap: 8px; color: #8a8295; }
+.method-stages [data-stage] { display: block; padding: 4px 8px; border-radius: 4px; white-space: nowrap; }
+.method-stages [data-stage].is-current { color: #332a44; background: #ebe8fc; }
+.method-stage-arrow { flex: none; color: #b3acbf; }
+.method-animation-status { min-height: 43px; padding: 0 20px 14px; margin: 0; font-size: 12px; line-height: 1.7; color: var(--muted); }
+.method-pan-hint { display: none; margin: 0; padding: 0 20px 12px; color: var(--muted); font-size: 11px; }
+.is-reduced-motion .diagram-overlays, .is-reduced-motion .method-animation-readout { display: none; }
+.moba-dialog { width: min(1040px, calc(100% - 40px)); max-height: 92vh; padding: 0; overflow: auto; background: #fff; border: 1px solid #d3cedd; border-radius: 12px; }
+.moba-dialog::backdrop { background: #171221a6; backdrop-filter: blur(4px); }
+.moba-dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 26px; border-bottom: 1px solid var(--line); }
+.moba-dialog-heading h3 { margin: 0; font-size: 18px; font-weight: 600; }
+.moba-dialog-heading p { margin: 5px 0 0; font-size: 12px; color: var(--muted); }
+.moba-close { width: 36px; height: 36px; flex: none; border: 1px solid var(--line); border-radius: 5px; background: #fff; font-size: 24px; line-height: 1; }
+.moba-dialog > img { display: block; width: calc(100% - 52px); height: auto; max-height: 62vh; object-fit: contain; margin: 22px 26px; background: #fff; }
+.moba-dialog-caption { padding: 0 26px 22px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.moba-dialog-caption p + p { margin-top: 6px; }
+.moba-dialog-caption a { display: inline-block; margin-top: 12px; color: var(--accent); }
+@media (max-width: 760px) {
+  .method-animation { padding-top: 16px; }
+  .method-canvas-scroll { padding: 0 12px 14px; }
+  .method-canvas { min-width: 980px; }
+  .method-animation-readout { padding: 12px 14px 10px; gap: 8px 16px; }
+  .method-stages { gap: 5px; font-size: 11px; }
+  .method-stages li { gap: 5px; }
+  .method-stages [data-stage] { padding: 4px 7px; }
+  .method-animation-status { padding-inline: 14px; min-height: 76px; }
+  .method-pan-hint { display: block; padding-inline: 14px; }
+  .moba-dialog { width: calc(100% - 24px); }
+  .moba-dialog-heading { gap: 12px; padding: 16px; }
+  .moba-dialog-heading h3 { font-size: 16px; }
+  .moba-dialog > img { width: calc(100% - 24px); margin: 18px 12px; }
+  .moba-dialog-caption { padding: 0 16px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .method-animation *, .method-animation *::before, .method-animation *::after { animation: none !important; transition: none !important; }
+}
