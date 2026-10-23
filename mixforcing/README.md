@@ -19,6 +19,8 @@ The Paper button is disabled until the arXiv paper is available. After publicati
 replace that button in `index.html` with a link to the arXiv abstract page, remove
 the pending state, and add the arXiv PDF URL to `citation_pdf_url`. Update the BibTeX
 both in `index.html` and in `assets/mix-forcing.bib` with the arXiv identifier.
+Also replace the pending Paper button in the personal homepage's Mix Forcing card
+(`../index.html`, under `#mix-forcing`) with the same arXiv abstract link.
 The local manuscript PDF is excluded from Git.
 
 ## Video files

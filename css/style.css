@@ -518,7 +518,8 @@
   margin-top: 12px;
 }
 
-.pub-links a {
+.pub-links a,
+.pub-links .pub-link-pending {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -530,6 +531,22 @@
   background: #f5f5f5;
   border: 1px solid #ddd;
   transition: all 0.2s;
+}
+
+.pub-links .pub-link-pending {
+  font-family: inherit;
+  color: #777;
+  background: #fafafa;
+  cursor: default;
+}
+
+.pub-link-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.pub-links a:hover .pub-link-icon {
+  filter: invert(1);
 }
 
 .pub-links a:hover {
@@ -601,6 +618,12 @@
   font-size: 0.95em;
   color: #333;
   margin-bottom: 12px;
+}
+
+.pub-card-description {
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.4;
 }
 
 /* 链接样式 */
