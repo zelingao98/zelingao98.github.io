@@ -607,6 +607,10 @@
   display: block;
 }
 
+#mix-forcing .pub-card-title {
+  text-wrap: balance;
+}
+
 .pub-card-venue {
   color: #007bff;
   margin-bottom: 8px;
