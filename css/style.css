@@ -92,7 +92,7 @@
   div#container {
     margin-left: auto;
     margin-right: auto;
-    width: 950px;
+    width: 1050px;
     text-align: left;
     position: relative;
     /* background-color: #f8f7debd; */
@@ -608,7 +608,7 @@
 }
 
 #mix-forcing .pub-card-title {
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .pub-card-venue {
