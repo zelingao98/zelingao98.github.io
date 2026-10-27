@@ -100,6 +100,9 @@ main .section-card .section-intro > p:last-child { max-width: 880px; margin-top:
 .method-details article { min-width: 0; padding: 22px; background: var(--project-surface); border: 1px solid var(--line); border-radius: 12px; }
 .method-details h3 { margin: 0 0 10px; color: var(--ink); font-size: 16px; font-weight: 600; line-height: 1.5; }
 .method-details p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.85; }
+@media (min-width: 761px) {
+  .method-details .chunk-conditioning-copy { max-width: 305px; text-wrap: balance; }
+}
 .citation-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .citation-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; }
 .citation-actions .project-button { padding: 8px 16px; font-size: 12px; }

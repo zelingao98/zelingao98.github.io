@@ -15,12 +15,12 @@ git push origin main
 
 ## Paper link
 
-The Paper button is disabled until the arXiv paper is available. After publication,
-replace that button in `index.html` with a link to the arXiv abstract page, remove
-the pending state, and add the arXiv PDF URL to `citation_pdf_url`. Update the BibTeX
-both in `index.html` and in `assets/mix-forcing.bib` with the arXiv identifier.
-Also replace the pending Paper button in the personal homepage's Mix Forcing card
-(`../index.html`, under `#mix-forcing`) with the same arXiv abstract link.
+The paper is available at https://arxiv.org/abs/2610.33589 (submitted October 24, 2026).
+The project Paper button and the personal homepage's Mix Forcing card
+(`../index.html`, under `#mix-forcing`) link to this abstract page.
+The `citation_pdf_url` metadata points to https://arxiv.org/pdf/2610.33589.
+Keep the inline BibTeX in `index.html` and the downloadable
+`assets/mix-forcing.bib` synchronized when updating citation details.
 The local manuscript PDF is excluded from Git.
 
 ## Video files
